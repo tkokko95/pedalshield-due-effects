@@ -44,12 +44,10 @@ void loop() {
     DAC1_out = map(ADC1_in, 0, 4095, 1, POT2);
 
     // The previous sample will be looped until the counter reaches n
-    while (count < n) {
+    for (count = 0;count < n;count++) {
         dacc_set_channel_selection(DACC_INTERFACE, 0);          //select DAC channel 0
         dacc_write_conversion_data(DACC_INTERFACE, DAC0_out);   //write on DAC
         dacc_set_channel_selection(DACC_INTERFACE, 1);          //select DAC channel 1
         dacc_write_conversion_data(DACC_INTERFACE, DAC1_out);   //write on DAC
-        count++;
     }
-    count = 0;
 }
