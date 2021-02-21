@@ -6,7 +6,7 @@ Only every n:th sample will "fresh", the previous one will be held and looped in
 // Setting up vars for ADC/DAC, the potentiometer, the loop ratio and the counter
 int ADC0_in, ADC1_in, DAC0_out, DAC1_out;
 int POT0, POT2;
-int n, count = 0;
+int n, count;
 
 // Unused constants for the LED, the stomp-switch and the programmable switch
 // Left here for future reference
@@ -44,7 +44,7 @@ void loop() {
     DAC1_out = map(ADC1_in, 0, 4095, 1, POT2);
 
     // The previous sample will be looped until the counter reaches n
-    for (count = 0;count < n;count++) {
+    for (count = 0 ; count < n ; count++) {
         dacc_set_channel_selection(DACC_INTERFACE, 0);          //select DAC channel 0
         dacc_write_conversion_data(DACC_INTERFACE, DAC0_out);   //write on DAC
         dacc_set_channel_selection(DACC_INTERFACE, 1);          //select DAC channel 1
