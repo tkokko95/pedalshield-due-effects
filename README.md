@@ -15,3 +15,13 @@ A looping sample rate reducer.
 
 Left potentiometer controls the sample time, right controls the output volume.
 
+## Bitcrusher combo
+
+Combines the previous effects into one
+
+Left: Sample time
+
+Middle: Bitcrush (depth reduction) amount
+
+Right: Output volume
+
