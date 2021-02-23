@@ -17,7 +17,7 @@ Left potentiometer controls the sample time, right controls the output volume.
 
 ## Bitcrusher combo
 
-Combines the previous effects into one
+2in1 version of the previous effects
 
 Left: Sample time
 
